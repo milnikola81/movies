@@ -21,17 +21,33 @@
         
        
     </head>
+
     <body>
         <div class="blog-masthead">
             <div class="container">
                 <nav class="nav">
                 <a class="nav-link" href="/">Home</a>
                 <a class="nav-link" href="/movies">Movies</a>
-                <a class="nav-link" href="/movies/add">Add</a>
+                <a class="nav-link" href="/movies/create-movie">Add</a>
                 </nav>
             </div>
         </div>
 
-        @yield('content')
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-sm-8 blog-main">
+
+                @yield('content')
+
+                </div>
+
+            </div>
+        
+        </div>
+
+        @include('partials.footer')
+
     </body>
 </html>
