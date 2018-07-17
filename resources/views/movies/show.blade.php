@@ -12,11 +12,9 @@
                 <th>ID</th>
                 -->
                 <th>Title</th>
-                <!--
                 <th>Genre</th>
                 <th>Director</th>
-                <th>Year</th>
-                -->
+                <th>Year</th>              
                 <th>Storyline</th>
             </tr>
 
@@ -25,11 +23,9 @@
                 <td>{{ $movie->id }}</td>
                 -->
                 <td>{{ $movie->title }}</td>
-                <!--
                 <td>{{ $movie->genre }}</td>
                 <td>{{ $movie->director }}</td>
-                <td>{{ $movie->year }}</td>
-                -->
+                <td>{{ $movie->year }}</td>             
                 <td>{{ $movie->storyline }}</td>
             </tr>
 
