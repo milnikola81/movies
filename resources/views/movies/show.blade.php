@@ -13,7 +13,7 @@
             </tr>
             <tr>
                 <th>Genre:</th>
-                <td>{{ $movie->genre }}</td>
+                <td><a href="/genres/{{ $movie->genre }}">{{ $movie->genre }}</a></td>
             </tr>
             <tr>
                 <th>Director:</th>
