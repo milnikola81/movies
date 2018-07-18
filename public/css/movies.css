@@ -9,6 +9,12 @@ th, td
     border: 1px solid gray;
 }
 
+.single-movie th, td
+{
+    border: none;
+}
+
+
 th
 {
     text-align: center;

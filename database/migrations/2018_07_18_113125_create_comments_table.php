@@ -16,12 +16,12 @@ class CreateCommentsTable extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
             $table->text('content');
+            $table->unsignedInteger('movie_id'); // kreira polje
+            $table->foreign('movie_id') // postavlja ga za foreign key
+            ->references('id') // referencira prema polju
+            ->on('movies') // iz tabele
+            ->onDelete('cascade');
             $table->timestamps();
-            $table->unsignedInteger('movie_id');
-            $table->foreign('movie_id')
-                ->references('id')
-                ->on('movies')
-                ->onDelete('cascade');
         });
     }
 

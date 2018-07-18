@@ -13,4 +13,8 @@ class Movie extends Model
         'year',
         'storyline'
     ];
+
+    public function comments() {
+        return $this->hasMany(Comment::Class);
+    }
 }

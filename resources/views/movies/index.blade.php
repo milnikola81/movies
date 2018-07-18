@@ -31,7 +31,8 @@
                 -->
                 <td>{{ $movie->storyline }}</td>
             </tr>
-
         @endforeach
+
+        </table>
 
 @endsection

@@ -6,27 +6,51 @@
 
 @section('content')
 
-        <table>
+        <table class='single-movie'>
             <tr>
-                <!--
-                <th>ID</th>
-                -->
-                <th>Title</th>
-                <th>Genre</th>
-                <th>Director</th>
-                <th>Year</th>              
-                <th>Storyline</th>
-            </tr>
-
-            <tr>
-                <!--
-                <td>{{ $movie->id }}</td>
-                -->
+                <th>Title:</th>
                 <td>{{ $movie->title }}</td>
+            </tr>
+            <tr>
+                <th>Genre:</th>
                 <td>{{ $movie->genre }}</td>
+            </tr>
+            <tr>
+                <th>Director:</th>
                 <td>{{ $movie->director }}</td>
-                <td>{{ $movie->year }}</td>             
+            </tr>
+            <tr>
+                <th>Year:</th>
+                <td>{{ $movie->year }}</td> 
+            </tr>
+            <tr>
+                <th>Storyline:</th>
                 <td>{{ $movie->storyline }}</td>
             </tr>
+
+        </table>
+
+        <p style="margin-top: 2rem">Comments:</p>
+
+        @foreach($movie->comments as $comment)
+        <div style="background: skyblue; margin-top: 0.5rem">
+            <div>{{ $comment->content }}</div>
+            <div>{{ $comment->created_at }}</div>
+        </div>
+        @endforeach
+
+        <form method="POST" action="/movies/{{$movie->id}}">
+
+            {{ csrf_field() }}
+
+            <div class="form-group">
+                <label for="content">Create new comment:</label>
+                <textarea name="content" class="form-control" id="content" rows="8"></textarea>
+            </div>
+            @include('/partials/error-message', ['fieldName' => 'content'])
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
 
 @endsection
