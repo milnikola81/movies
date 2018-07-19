@@ -1,26 +1,22 @@
-body
-{
-    padding: 1rem;
-}
-
 th, td
 {
     padding: 0.5rem;
-    border: 1px solid gray;
 }
 
-.single-movie th, td
+.comment-wrapper
 {
-    border: none;
+    background: white;
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
 }
 
-
-th
+.blog-footer
 {
-    text-align: center;
+    margin-top: 4rem;
 }
 
 .title
 {
     text-align: center;
+    margin-top: 4rem;
 }

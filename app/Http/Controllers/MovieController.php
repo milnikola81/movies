@@ -7,6 +7,8 @@ use App\Movie;
 
 class MovieController extends Controller
 {
+    protected $latest_movies;
+
     public function index() {
         $movies = Movie::all();
         return view('movies.index', compact('movies')); //ruta je sada promenjena u resources/views/cars/index.blade.php
@@ -22,7 +24,7 @@ class MovieController extends Controller
     }
 
     public function store() {
-        $this->validate(request(), ['title' => 'required', 'genre' => 'required', 'director' => 'required', 'year' => 'required|before:tomorrow|after:1900', 'storyline' => 'required|max:1000']);
+        $this->validate(request(), ['title' => 'required', 'genre' => 'required', 'director' => 'required', 'year' => 'required|before:tomorrow|after:1900|before:2019', 'storyline' => 'required|max:1000']);
         Movie::create([
             'title' => request('title'),
             'genre' => request('genre'),

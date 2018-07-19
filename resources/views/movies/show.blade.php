@@ -33,7 +33,7 @@
         <p style="margin-top: 2rem">Comments:</p>
 
         @foreach($movie->comments as $comment)
-        <div style="background: skyblue; margin-top: 0.5rem">
+        <div class="comment-wrapper">
             <div>{{ $comment->content }}</div>
             <div>{{ $comment->created_at }}</div>
         </div>

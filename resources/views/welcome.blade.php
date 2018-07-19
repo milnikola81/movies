@@ -1,7 +1,7 @@
 @extends('layouts/master')
 
 @section('title')
-    Movies Laravel | All Movies
+    Movies Laravel Project
 @endsection
 
 @section('content')

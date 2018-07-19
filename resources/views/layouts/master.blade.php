@@ -16,6 +16,9 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
         <!-- App CSS -->
+        <link rel="stylesheet" href="/css/app.css" >
+
+        <!-- Movies CSS -->
         <link rel="stylesheet" href="/css/movies.css" >
 
         
@@ -26,9 +29,9 @@
         <div class="blog-masthead">
             <div class="container">
                 <nav class="nav">
-                <a class="nav-link" href="/">Home</a>
-                <a class="nav-link" href="/movies">Movies</a>
-                <a class="nav-link" href="/movies/create-movie">Add</a>
+                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="/movies">Movies</a>
+                    <a class="nav-link" href="/movies/create-movie">Add</a>
                 </nav>
             </div>
         </div>
@@ -40,6 +43,12 @@
                 <div class="col-sm-8 blog-main">
 
                 @yield('content')
+
+                </div>
+
+                <div class="col-sm-3 offset-sm-1 blog-sidebar">
+
+                @yield('sidebar')
 
                 </div>
 

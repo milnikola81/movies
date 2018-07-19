@@ -36,3 +36,9 @@
         </table>
 
 @endsection
+
+@section('sidebar')
+
+    @include('/partials/sidebar')
+
+@endsection
