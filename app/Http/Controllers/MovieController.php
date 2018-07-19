@@ -7,11 +7,12 @@ use App\Movie;
 
 class MovieController extends Controller
 {
-    protected $latest_movies;
+    //protected $latest_movies;
 
     public function index() {
         $movies = Movie::all();
-        return view('movies.index', compact('movies')); //ruta je sada promenjena u resources/views/cars/index.blade.php
+        $latest_movies = Movie::orderBy('created_at', 'desc')->take(5)->get();
+        return view('movies.index', compact('movies', 'latest_movies')); //ruta je sada promenjena u resources/views/cars/index.blade.php
     }
 
     public function createMovie() {
